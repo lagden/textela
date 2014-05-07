@@ -1,0 +1,11 @@
+// Status colors
+$statusCores: ('red' $red) ('green' $green) ('yellow' $yellow)
+@each $c in $statusCores
+    $name: nth($c, 1)
+    $color: nth($c, 2)
+    .icon--#{$name}
+        color: $color
+
+.icon--disabled
+    color: $grayDark
+    opacity: 0.3

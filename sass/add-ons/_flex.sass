@@ -1,0 +1,48 @@
+=flexbox
+    display: flex
+    flex-flow: row nowrap
+
+=flex($values)
+    flex: $values
+
+=order($val)
+    order: $val
+
+.rowflex
+    +flexbox
+
+@for $c from 1 through 12
+    .colflex-#{$c}
+        +flex($c)
+
+.colflex--auto
+    +flex(0 1 auto)
+
+[class*="colflex-"]
+    margin-right: 1em
+
+[class*="colflex-"]:last-child
+    margin-right: 0
+
+// Parent - Flex box vertical align
+.align-items--center
+    align-items: center
+
+.align-items--baseline
+    align-items: baseline
+
+.align-items--end
+    align-items: flex-end
+
+.align-content--between
+    align-content: space-between
+
+.align-content--center
+    align-content: center
+
+// Single Child - Flex box horizontal align
+.align-self--start
+    align-self: flex-start
+
+.align-self--end
+    align-self: flex-end
