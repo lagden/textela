@@ -1,7 +1,7 @@
-Basic Awesome APP
-=================
+Basic Screen
+============
 
-Making a better and awesome web!!!
+Yeahh!!
 
 ## Dependências
 
@@ -29,7 +29,7 @@ Se já tem tudo instalado vá para a **parte 2**.
     npm install -g volo
     npm install -g bower
     npm install -g grunt-cli
-    
+
 ### Parte 2
 
     git clone user@server:repo/projeto.git projeto
