@@ -56,6 +56,27 @@
 =reset-filter
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
 
+// Modal
+=modal($color: black, $zIndex: 100, $alpha: 0.7)
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background-color: rgba($color, $alpha)
+    z-index: $zIndex
+
+// Inside Modal
+=insideModal($sw: 100%, $sh: 100%)
+    +translate(-(ceil($sw/2)), -(ceil($sh/2)))
+    position: absolute
+    left: 50%
+    top: 50%
+    // width: $sw
+    // height: $sh
+    display: block
+    margin: auto
+
 // Sprites
 =generate-sprites($name, $map-path, $map-path-retina: null)
     $map: sprite-map($map-path)
