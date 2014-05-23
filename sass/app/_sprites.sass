@@ -1,16 +1,16 @@
 // Logotipo
-$logotipo-map: sprite-map('sprites/logotipo/*.png')
+$logotipo-map: sprite-map("sprites/logotipo/*.png")
 +generate-sprites('logotipo', $logotipo-map)
 
 // Seguradora
-$seguradora-map: sprite-map('sprites/seguradora/*.png')
-$seguradora-map-retina: sprite-map('sprites/seguradora2x/*.png')
+$seguradora-map: sprite-map("sprites/seguradora/*.png")
+$seguradora-map-retina: sprite-map("sprites/seguradora2x/*.png")
 +generate-sprites('seguradora', $seguradora-map, $seguradora-map-retina)
 
 // Helpers
 %complemento
     display: inline-block
-    vertical-align: middle
+	vertical-align: middle
     padding: 0
 
 [class^="logotipo-"],
