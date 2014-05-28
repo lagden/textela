@@ -1,0 +1,48 @@
+{
+    "cols": [
+        "Status",
+        "Número",
+        "Tipo",
+        "Nome do Segurado",
+        "Inclusão",
+        "Vigência",
+        "Retorno",
+        "Estrutura",
+        "Produtor",
+        "Ação"
+    ],
+    "rows": [{
+        "Status": "<span class=\"icon-flag icon--green\"></span> <span class=\"icon-record icon--green\"></span>",
+        "Número": "12067",
+        "Tipo": "Seguro Novo",
+        "Nome do Segurado": "Jorge Ricardo da Silva",
+        "Inclusão": "06/05/2014 17:09",
+        "Vigência": "06/05/2014",
+        "Retorno": "Retornar Contato",
+        "Estrutura": "TEx",
+        "Produtor": "Lagden",
+        "Ação": "<a class=\"hidden\" title=\"Transferir cálculo\" href=\"#xxx\"><span class=\"icon-transfer\"></span></a>  <a title=\"Duplicar\" href=\"#xxx\"><span class=\"icon-copy\"></span></a> <a title=\"Fechamento\" href=\"#xxx\"><span class=\"icon-signup icon--disabled\"></span></a> <a title=\"Agendamento\" href=\"#xxx\"><span class=\"icon-calendar icon--disabled\"></span></a>"
+    }, {
+        "Status": "<span class=\"icon-flag icon--yellow\"></span> <span class=\"icon-record icon--yellow\"></span>",
+        "Número": "12067",
+        "Tipo": "Seguro Novo",
+        "Nome do Segurado": "Jorge Ricardo da Silva",
+        "Inclusão": "06/05/2014 17:09",
+        "Vigência": "06/05/2014",
+        "Retorno": "Retornar Contato",
+        "Estrutura": "TEx",
+        "Produtor": "Lagden",
+        "Ação": "<a title=\"Transferir cálculo\" href=\"#xxx\"><span class=\"icon-transfer\"></span></a> <a class=\"hidden\" title=\"Duplicar\" href=\"#xxx\"><span class=\"icon-copy\"></span></a> <a title=\"Fechamento\" href=\"#xxx\"><span class=\"icon-signup icon--green\"></span></a> <a title=\"Agendamento\" href=\"#xxx\"><span class=\"icon-calendar icon--red\"></span></a>"
+    }, {
+        "Status": "<span class=\"icon-flag icon--red\"></span> <span class=\"icon-record icon--red\"></span>",
+        "Número": "12067",
+        "Tipo": "Seguro Novo",
+        "Nome do Segurado": "Jorge Ricardo da Silva",
+        "Inclusão": "06/05/2014 17:09",
+        "Vigência": "06/05/2014",
+        "Retorno": "Retornar Contato",
+        "Estrutura": "TEx",
+        "Produtor": "Lagden",
+        "Ação": "<a title=\"Transferir cálculo\" href=\"#xxx\"><span class=\"icon-transfer\"></span></a> <a class=\"hidden\" title=\"Duplicar\" href=\"#xxx\"><span class=\"icon-copy\"></span></a> <a title=\"Fechamento\" href=\"#xxx\"><span class=\"icon-signup icon--green\"></span></a> <a title=\"Agendamento\" href=\"#xxx\"><span class=\"icon-calendar icon--red\"></span></a>"
+    }]
+}

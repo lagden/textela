@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+THIS=$(basename $0)
+DIR="$( cd -P "$( dirname "$0" )" && pwd )"
+cd $DIR
+cd ..
+CURR_FOLDER=`pwd`
+
+# Root
+cd $CURR_FOLDER
+
+if [ -d web ]
+then
+    cd web
+    if [ `which pngquant` != ""]; then
+        pngquant --quality 0-20 --ext .png --force */*.png
+    fi
+fi

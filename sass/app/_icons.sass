@@ -4,7 +4,11 @@ $statusCores: ('red' $red) ('green' $green) ('yellow' $yellow)
     $name: nth($c, 1)
     $color: nth($c, 2)
     .icon--#{$name}
-        color: $color
+        // color: $color
+        text-shadow: 0 0 5px rgba($color, 0.5)
+        background-image: linear-gradient(top, $color 0%, darken($color, 19) 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
 
 .icon--disabled
     color: $grayDark

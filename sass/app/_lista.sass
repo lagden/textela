@@ -1,0 +1,39 @@
+.lista__header
+    border: 1px solid $grayLightest
+    border-radius: $base-border-radius
+
+.opts
+    +unstyled-link
+    font-size: 1.5em
+    display: inline-block
+    vertical-align: middle
+    margin-right: 10px
+    color: $blue
+    &:hover
+        color: rgba($blue, 0.7)
+
+.opts--plus
+    font-size: 1.1em
+    color: $black
+    &:hover
+        color: rgba($black, 0.7)
+
+// Lista
+.table
+    > thead,
+    > tbody,
+    > tfoot
+        > tr
+            > th,
+            > td
+                vertical-align: middle
+
+.table__action
+    > tbody > tr > td:last-of-type
+        @extend .nowrap
+        font-size: 1.3em
+        a
+            @extend .link--unstyled
+            display: inline-block
+            vertical-align: middle
+            margin: 0 5px 0

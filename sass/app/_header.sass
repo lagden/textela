@@ -1,0 +1,70 @@
+$sizeH: image-height('sprites/logotipo/tex.png')
+
+.header__main
+    min-height: $sizeH
+    line-height: $sizeH
+
+.nav
+    list-style: none
+    margin-left: 0
+    > li
+        margin-right: 10px
+        &:last
+            margin-right: 0
+        &,
+        > a
+            @extend .link--white
+            font-size: 0.9em
+
+$lessSearch: 30
+.frm
+    input[type=search]
+        color: $white
+        background: transparent
+        border: none
+        width: 170px - $lessSearch
+        cursor: text
+        &:focus
+            outline: none
+
+.search
+    background-color: $gray
+    border-radius: 50em
+    width: 220px - $lessSearch
+    padding: 0 0 0 10px
+
+.btn
+    font-weight: bold
+    position: relative
+    color: $white
+    &:focus
+        outline: none
+    > span
+        vertical-align: baseline
+
+.btn__search
+    width: 30px
+    background: transparent
+    border: none
+    cursor: pointer
+
+.separador
+    position: relative
+    &:before
+        left: -22px
+        top: -5px
+        position: absolute
+        content: ''
+        width: 1px
+        height: 28px
+        display: block
+        background: rgba(white, 0.5)
+        margin-left: 10px
+
+.toolbelt
+    > a
+        @extend .link--white
+        font-size: 1.1em
+        display: inline-block
+        vertical-align: baseline
+        margin-left: 5px

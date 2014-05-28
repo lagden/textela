@@ -15,11 +15,16 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        paths: {
+            buildDoc: pathBuildDoc,
+            devDoc: pathDevDoc,
+            devJs: pathDevJs,
+        },
         clean: {
             app: {
                 src: [pathBuildDoc]
             },
-            end:{
+            end: {
                 src: [pathBuildDoc + 'js/templates']
             }
         },
@@ -45,6 +50,22 @@ module.exports = function(grunt) {
             dev: buildConnect(serverPort, '*', false, 9666, true, pathDevDoc),
             build: buildConnect(serverPort, '*', true, false, false, pathBuildDoc)
         },
+        jade: {
+            index: {
+                files: {
+                    '<%= paths.devDoc %>index.html': 'templates/index.jade'
+                }
+            },
+            lista: {
+                options: {
+                    pretty: true,
+                    data: grunt.file.readJSON('data/lista.json')
+                },
+                files: {
+                    '<%= paths.devDoc %>lista.html': 'templates/lista.jade'
+                }
+            }
+        },
         watch: {
             sass: {
                 files: ['sass/**/*.sass'],
@@ -54,7 +75,7 @@ module.exports = function(grunt) {
                 }
             },
             autoprefixer: {
-                files: [pathDevDoc + 'css/screen.css'],
+                files: [pathDevDoc + 'css/main.css'],
                 tasks: ['shell:prefixer'],
             },
             scripts: {
@@ -63,12 +84,19 @@ module.exports = function(grunt) {
                 options: {
                     interrupt: true
                 }
+            },
+            jade: {
+                files: ['templates/**/*.jade', 'data/**/*.json'],
+                tasks: ['jade'],
+                options: {
+                    interrupt: true
+                }
             }
         },
         shell: {
             prefixer: {
                 command: [
-                    'autoprefixer -o ' + pathDevDoc + 'css/screen.css ' + pathDevDoc + 'css/screen.css'
+                    'autoprefixer -o ' + pathDevDoc + 'css/main.prefixer.css ' + pathDevDoc + 'css/main.css'
                 ].join(' ; '),
                 options: {
                     stdout: true
@@ -95,9 +123,9 @@ module.exports = function(grunt) {
             );
         }
     );
-    grunt.registerTask('default', ['clean:app', 'compass:app', 'jshint:app']);
+    grunt.registerTask('default', ['clean:app', 'jade', 'compass:app', 'shell:prefixer', 'jshint:app']);
     grunt.registerTask('server', ['default', 'connect:dev', 'watch']);
-    grunt.registerTask('build', ['default', 'requirejs', 'clean:end']);
+    // grunt.registerTask('build', ['default', 'requirejs', 'clean:end']);
 };
 
 function buildConnect(port, hostname, keepalive, livereload, debug, base, open) {

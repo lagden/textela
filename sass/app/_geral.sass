@@ -20,6 +20,7 @@ body
     height: 100%
     font-size: 95%
 
+// Links sem style
 .link--unstyled
     +unstyled-link
 
@@ -34,116 +35,7 @@ body
 .wrapper
     width: 90%
     margin: 0 auto
-    padding: 40px 0
-    &.sticky
-        margin-bottom: $sticky-footer * -1
-        min-height: 100%
-        height: auto !important
-        height: 100%
 
-.container
+.content
     background: $white
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.5)
-    padding: 40px
-
-.header
-    border: 1px solid $grayLightest
-    border-radius: $base-border-radius
-
-.opts
-    +unstyled-link
-    font-size: 1.5em
-    display: inline-block
-    vertical-align: middle
-    margin-right: 10px
-    color: $blue
-    &:hover
-        color: rgba($blue, 0.7)
-
-.opts--plus
-    font-size: 1.1em
-    color: $black
-    &:hover
-        color: rgba($black, 0.7)
-
-.table
-    > thead,
-    > tbody,
-    > tfoot
-        > tr
-            > th,
-            > td
-                vertical-align: middle
-
-.table__action
-    @extend .nowrap
-    font-size: 1.3em
-    a
-        @extend .link--unstyled
-        display: inline-block
-        vertical-align: middle
-        margin: 0 5px 0
-
-.nav
-    list-style: none
-    margin-left: 0
-    > li
-        margin-right: 10px
-        &:last
-            margin-right: 0
-        &,
-        > a
-            @extend .link--white
-            font-size: 0.9em
-
-$lessSearch: 30
-
-.frm
-    input[type=search]
-        color: $white
-        background: transparent
-        border: none
-        width: 170px - $lessSearch
-        cursor: text
-        &:focus
-            outline: none
-
-.search
-    background-color: $gray
-    border-radius: 50em
-    width: 220px - $lessSearch
-    padding: 0 0 0 10px
-
-.btn
-    font-weight: bold
-    position: relative
-    color: $white
-    &:focus
-        outline: none
-    > span
-        vertical-align: baseline
-
-.btn__search
-    width: 30px
-    background: transparent
-    border: none
-    cursor: pointer
-
-.toolbelt
-    > a
-        @extend .link--white
-        font-size: 1.1em
-        margin-right: 5px
-        &:last
-            margin-right: 0
-        > .va-top
-            vertical-align: top
-
-.footer,
-.push
-    height: $sticky-footer
-
-.footer
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5)
-    background-color: $gray
-    color: $grayLight
