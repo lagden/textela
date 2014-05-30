@@ -66,6 +66,21 @@ module.exports = function(grunt) {
                 }
             }
         },
+        // grunticon: {
+        //     app: {
+        //         files: [{
+        //             expand: true,
+        //             cwd: devDoc + 'images/icons/src',
+        //             src: ['*.svg', '*.png'],
+        //             dest: devDoc + 'images/icons'
+        //         }],
+        //         options: {
+        //             customselectors: {
+        //                 "*": [".icon-$1:before"]
+        //             }
+        //         }
+        //     }
+        // },
         watch: {
             sass: {
                 files: ['sass/**/*.sass'],
