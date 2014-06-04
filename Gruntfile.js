@@ -21,11 +21,6 @@ module.exports = function(grunt) {
             devDoc: pathDevDoc,
             devJs: pathDevJs,
         },
-        clean: {
-            app: {
-                src: [pathBuildDoc]
-            }
-        },
         jshint: {
             app: {
                 files: {
@@ -165,7 +160,7 @@ module.exports = function(grunt) {
         }
     );
 
-    grunt.registerTask('default', ['clean:app', 'jade', 'compass:app', 'shell:prefixer', 'jshint:app']);
+    grunt.registerTask('default', ['jade', 'compass:app', 'shell:prefixer', 'jshint:app']);
     grunt.registerTask('server', ['default', 'connect:dev', 'watch']);
     grunt.registerTask('build', ['default', 'jade:prod', 'requirejs', 'shell:build']);
 };
