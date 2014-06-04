@@ -1,7 +1,6 @@
-require(['./common'], function() {
+require(['./config'], function() {
 
     'use strict';
 
-    require(['../bootstrap']);
-
+    require(['bootstrap']);
 });

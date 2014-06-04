@@ -20,10 +20,10 @@
   "volo": {
     "baseUrl": "dev/js/lib",
     "dependencies": {
+      "almond": "https://raw.githubusercontent.com/jrburke/almond/master/almond.js",
       "require": "github:jrburke/requirejs/2.1.13",
       "require/text": "github:requirejs/text/2.0.12",
       "require/domReady": "https://raw.github.com/requirejs/domReady/2.0.1/domReady.js",
-      "greensock/TweenMax": "https://raw.githubusercontent.com/greensock/GreenSock-JS/master/src/uncompressed/TweenMax.js",
       "angular": "https://raw.githubusercontent.com/angular/bower-angular/master/angular.js",
       "angular/route": "https://raw.githubusercontent.com/angular/bower-angular-route/master/angular-route.js",
       "angular/resource": "https://raw.githubusercontent.com/angular/bower-angular-resource/master/angular-resource.js"

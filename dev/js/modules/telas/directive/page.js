@@ -16,5 +16,5 @@ define(function() {
         };
     }
 
-    return Page;
+    return ['$http', '$templateCache', '$compile', '$parse', Page];
 });

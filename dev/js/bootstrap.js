@@ -1,16 +1,18 @@
-define([
-    'require',
-    'angular',
-    'angular/route',
-    'angular/resource',
-], function(require, angular) {
+define(function(require) {
 
     'use strict';
 
-    require([
-        'domReady!',
-        'modules/telas/telas'
-    ], function(document, telas) {
+    require('angular/route');
+    require('angular/resource');
+
+    var angular = require('angular');
+    var domReady = require('domReady');
+
+    // Load Modules
+    var modules = [];
+    modules.push(require('modules/telas/telas'));
+
+    domReady(function(doc) {
 
         // Fix
         if (window.location.hash === '#_=_')
@@ -29,14 +31,15 @@ define([
         angular.module(appModuleName).config(['$locationProvider',
             function($locationProvider) {
                 $locationProvider.html5Mode(false).hashPrefix('!');
-                // $locationProvider.html5Mode(true);
             }
         ]);
 
-        // Submodules
-        angular.module(appModuleName).requires.push(telas.name);
+        // Modules
+        for (var i = 0, len = modules.length; i < len; i++) {
+            angular.module(appModuleName).requires.push(modules[i].name);
+        }
 
         // Bootstrap
-        angular.bootstrap(document, [appModuleName]);
+        angular.bootstrap(doc, [appModuleName]);
     });
 });

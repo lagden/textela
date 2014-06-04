@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+THIS=$(basename $0)
+DIR="$( cd -P "$( dirname "$0" )" && pwd )"
+cd $DIR
+cd ..
+CURR_FOLDER=`pwd`
+
+# Root
+cd $CURR_FOLDER
+
+# Build
+rm -rf ./build
+r.js -o ./tools/build.js
+
+exit 0

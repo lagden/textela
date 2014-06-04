@@ -17,5 +17,5 @@ define(['text!modules/telas/view/lista.html'], function(lista) {
             });
     }
 
-    return Routes;
+    return ['$routeProvider', Routes];
 });

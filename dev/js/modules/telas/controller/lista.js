@@ -12,5 +12,5 @@ define(function() {
             });
     }
 
-    return ListaController;
+    return ['$scope', 'PagesApiService', ListaController];
 });

@@ -15,4 +15,7 @@ html
     body
         block content
         block scripts
-        script(src="js/lib/require.js", data-main="js/webApp")
+        if (prod)
+            script(src="js/webApp.build.js")
+        else
+            script(src="js/lib/require.js", data-main="js/webApp")

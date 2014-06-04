@@ -6,5 +6,5 @@ define(function() {
         return $resource('data/pages.json');
     }
 
-    return PagesApiService;
+    return ['$resource', '$location', PagesApiService];
 });

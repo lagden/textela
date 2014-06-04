@@ -6,5 +6,5 @@ define(function() {
         $scope.url = 'telas/preview/' + $routeParams.slug + '.html';
     }
 
-    return ShowController;
+    return ['$scope', '$routeParams', ShowController];
 });

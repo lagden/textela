@@ -1,22 +1,16 @@
 {
     "optimize": "uglify2",
-    "removeCombined": true,
-    "generateSourceMaps": false,
+    "removeCombined": false,
+    "generateSourceMaps": true,
     "preserveLicenseComments": false,
+    "findNestedDependencies": true,
+    "useStrict": true,
+    "wrap": true,
     "optimizeCss": "none",
-    "mainConfigFile": "../dev/js/common.js",
-    "appDir": "../dev",
-    "dir": "../build",
-    "baseUrl": "js/lib",
-    "modules": [{
-        "name": "../config"
-    }, {
-        "name": "../common",
-        "include": [],
-        "exclude": ["../config"]
-    }, {
-        "name": "../main",
-        "include": ["app/main"],
-        "exclude": ["../config", "../common"]
-    }]
+    "mainConfigFile": "../dev/js/config.js",
+    "baseUrl": "../dev/js/lib",
+    "stubModules": ["text"],
+    "name": "almond",
+    "include": ["../webApp"],
+    "out": "../dev/js/webApp.build.js"
 }

@@ -2,7 +2,8 @@
 
 var os = require('os'),
     exec = require('child_process').exec,
-    serverPort = 9000;
+    serverPort = 9000,
+    env = process.env['NODE_ENV'] || false;
 
 module.exports = function(grunt) {
 
@@ -23,9 +24,6 @@ module.exports = function(grunt) {
         clean: {
             app: {
                 src: [pathBuildDoc]
-            },
-            end: {
-                src: [pathBuildDoc + 'js/templates']
             }
         },
         jshint: {
@@ -35,7 +33,10 @@ module.exports = function(grunt) {
                 },
                 options: {
                     jshintrc: '.jshintrc',
-                    ignores: [pathDevJs + 'lib/**/*.js']
+                    ignores: [
+                        pathDevJs + 'lib/**/*.js',
+                        pathDevJs + 'webApp.build.js'
+                    ]
                 }
             }
         },
@@ -51,7 +52,22 @@ module.exports = function(grunt) {
             build: buildConnect(serverPort, '*', true, false, false, pathBuildDoc)
         },
         jade: {
+            prod: {
+                options: {
+                    data: {
+                        "prod": true
+                    }
+                },
+                files: {
+                    '<%= paths.devDoc %>index.html': 'templates/index.jade'
+                }
+            },
             index: {
+                options: {
+                    data: {
+                        "prod": env === 'prod' ? true : false
+                    }
+                },
                 files: {
                     '<%= paths.devDoc %>index.html': 'templates/index.jade'
                 }
@@ -112,6 +128,19 @@ module.exports = function(grunt) {
                 options: {
                     stdout: true
                 }
+            },
+            build: {
+                command: [
+                    'rm -rf ' + pathBuildDoc,
+                    'mkdir -p ' + pathBuildDoc,
+                    'cp -r ' + pathDevDoc + '. ' + pathBuildDoc + '.',
+                    'rm -rf ' + pathBuildDoc + 'js/*',
+                    'cp ' + pathDevDoc + 'js/webApp.build.* ' + pathBuildDoc + 'js/.',
+                    'rm ' + pathDevDoc + 'js/webApp.build.*'
+                ].join(' ; '),
+                options: {
+                    stdout: true
+                }
             }
         },
     });
@@ -122,6 +151,7 @@ module.exports = function(grunt) {
         function() {
             var done = this.async(),
                 command = (os.platform() == 'win32') ? 'r.js.cmd' : 'r.js';
+
             exec(command + ' -o ./tools/build.js',
                 function(err, stdout, stderr) {
                     if (err) {
@@ -134,9 +164,10 @@ module.exports = function(grunt) {
             );
         }
     );
+
     grunt.registerTask('default', ['clean:app', 'jade', 'compass:app', 'shell:prefixer', 'jshint:app']);
     grunt.registerTask('server', ['default', 'connect:dev', 'watch']);
-    // grunt.registerTask('build', ['default', 'requirejs', 'clean:end']);
+    grunt.registerTask('build', ['default', 'jade:prod', 'requirejs', 'shell:build']);
 };
 
 function buildConnect(port, hostname, keepalive, livereload, debug, base, open) {
