@@ -9,7 +9,7 @@ define(['text!modules/telas/view/lista.html'], function(lista) {
                 controller: 'ListaController'
             })
             .when('/telas/show/:slug', {
-                template: '<div ng-include="url"></div>',
+                template: '<page data-show="url"></page>',
                 controller: 'ShowController'
             })
             .otherwise({

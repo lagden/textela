@@ -3,18 +3,20 @@ define([
     'modules/telas/config/routes',
     'modules/telas/factory/pages',
     'modules/telas/controller/lista',
-    'modules/telas/controller/show'
-], function(angular, Routes, PagesApiService, ListaController, ShowController) {
+    'modules/telas/controller/show',
+    'modules/telas/directive/page'
+], function(angular, Routes, PagesApiService, ListaController, ShowController, Page) {
 
     'use strict';
 
     var telas = angular.module('telas', []);
 
-    telas.config(Routes);
-    telas.factory('PagesApiService', PagesApiService);
     telas
+        .config(Routes)
+        .factory('PagesApiService', PagesApiService)
         .controller('ListaController', ListaController)
-        .controller('ShowController', ShowController);
+        .controller('ShowController', ShowController)
+        .directive('page', Page);
 
     return telas;
 });

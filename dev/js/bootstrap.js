@@ -12,12 +12,14 @@ define([
         'modules/telas/telas'
     ], function(document, telas) {
 
-        // Fix hash - Facebook
+        // Fix
         if (window.location.hash === '#_=_')
             window.location.hash = '#!';
 
-        // Setup webApp
+        // Setup
         var appModuleName = 'webApp';
+
+        // Module
         angular.module(appModuleName, [
             'ngResource',
             'ngRoute'
@@ -26,15 +28,15 @@ define([
         // Config
         angular.module(appModuleName).config(['$locationProvider',
             function($locationProvider) {
-                // $locationProvider.html5Mode(false).hashPrefix('!');
-                $locationProvider.html5Mode(true);
+                $locationProvider.html5Mode(false).hashPrefix('!');
+                // $locationProvider.html5Mode(true);
             }
         ]);
 
-        // Register submodules
+        // Submodules
         angular.module(appModuleName).requires.push(telas.name);
 
-        // Init
+        // Bootstrap
         angular.bootstrap(document, [appModuleName]);
     });
 });

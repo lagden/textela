@@ -7,15 +7,15 @@
   },
   "license": "BSD",
   "devDependencies": {
-    "matchdep": "~0.3.x",
     "grunt": "~0.4.x",
-    "grunt-contrib-compass": "~0.7.x",
     "grunt-contrib-clean": "~0.5.x",
-    "grunt-contrib-watch": "~0.6.x",
-    "grunt-contrib-jshint": "~0.8.x",
+    "grunt-contrib-compass": "~0.7.x",
     "grunt-contrib-connect": "~0.7.x",
     "grunt-contrib-jade": "~0.11.x",
-    "grunt-shell": "~0.7.x"
+    "grunt-contrib-jshint": "~0.8.x",
+    "grunt-contrib-watch": "~0.6.x",
+    "grunt-shell": "~0.7.x",
+    "matchdep": "~0.3.x"
   },
   "volo": {
     "baseUrl": "dev/js/lib",
@@ -25,11 +25,8 @@
       "require/domReady": "https://raw.github.com/requirejs/domReady/2.0.1/domReady.js",
       "greensock/TweenMax": "https://raw.githubusercontent.com/greensock/GreenSock-JS/master/src/uncompressed/TweenMax.js",
       "angular": "https://raw.githubusercontent.com/angular/bower-angular/master/angular.js",
-      "angular/loader": "https://raw.githubusercontent.com/angular/bower-angular-loader/master/angular-loader.js",
-      "angular/cookies": "https://raw.githubusercontent.com/angular/bower-angular-cookies/master/angular-cookies.js",
       "angular/route": "https://raw.githubusercontent.com/angular/bower-angular-route/master/angular-route.js",
-      "angular/resource": "https://raw.githubusercontent.com/angular/bower-angular-resource/master/angular-resource.js",
-      "angular/sanitize": "https://raw.githubusercontent.com/angular/bower-angular-sanitize/master/angular-sanitize.js"
+      "angular/resource": "https://raw.githubusercontent.com/angular/bower-angular-resource/master/angular-resource.js"
     }
   },
   "scripts": {

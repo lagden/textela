@@ -62,9 +62,9 @@ module.exports = function(grunt) {
                     data: grunt.file.readJSON('data/lista.json')
                 },
                 files: [{
-                    '<%= paths.devDoc %>preview/lista.html': 'templates/preview/lista.jade'
+                    '<%= paths.devDoc %>telas/preview/lista.html': 'templates/telas/preview/lista.jade'
                 }, {
-                    '<%= paths.devDoc %>preview/login.html': 'templates/preview/login.jade'
+                    '<%= paths.devDoc %>telas/preview/login.html': 'templates/telas/preview/login.jade'
                 }]
             },
             modules: {
@@ -77,21 +77,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        // grunticon: {
-        //     app: {
-        //         files: [{
-        //             expand: true,
-        //             cwd: devDoc + 'images/icons/src',
-        //             src: ['*.svg', '*.png'],
-        //             dest: devDoc + 'images/icons'
-        //         }],
-        //         options: {
-        //             customselectors: {
-        //                 "*": [".icon-$1:before"]
-        //             }
-        //         }
-        //     }
-        // },
         watch: {
             sass: {
                 files: ['sass/**/*.sass'],

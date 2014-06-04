@@ -16,13 +16,7 @@ requirejs.config({
         'angular/route': {
             deps: ['angular']
         },
-        'angular/cookies': {
-            deps: ['angular']
-        },
         'angular/resource': {
-            deps: ['angular']
-        },
-        'angular/sanitize': {
             deps: ['angular']
         }
     }
