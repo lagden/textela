@@ -56,13 +56,24 @@ module.exports = function(grunt) {
                     '<%= paths.devDoc %>index.html': 'templates/index.jade'
                 }
             },
-            lista: {
+            preview: {
+                options: {
+                    pretty: true,
+                    data: grunt.file.readJSON('data/lista.json')
+                },
+                files: [{
+                    '<%= paths.devDoc %>preview/lista.html': 'templates/preview/lista.jade'
+                }, {
+                    '<%= paths.devDoc %>preview/login.html': 'templates/preview/login.jade'
+                }]
+            },
+            modules: {
                 options: {
                     pretty: true,
                     data: grunt.file.readJSON('data/lista.json')
                 },
                 files: {
-                    '<%= paths.devDoc %>lista.html': 'templates/lista.jade'
+                    '<%= paths.devDoc %>js/modules/telas/view/lista.html': 'templates/telas/lista.jade'
                 }
             }
         },
@@ -152,7 +163,7 @@ function buildConnect(port, hostname, keepalive, livereload, debug, base, open) 
             'livereload': livereload || false,
             'debug': debug || false,
             'base': base,
-            'open': open || 'http://localhost:' + port + '/index.html'
+            'open': open || 'http://localhost:' + port + '/'
         }
     }
     return o;

@@ -1,0 +1,9 @@
+[{
+    "name": "Listagem de cotações",
+    "description": "Preview da página de listagem das cotações",
+    "slug": "lista"
+}, {
+    "name": "Tela de Login",
+    "description": "Preview da tela de login",
+    "slug": "login"
+}]

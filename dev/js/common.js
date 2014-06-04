@@ -5,28 +5,24 @@ requirejs.config({
     waitSeconds: 15,
     baseUrl: 'js/lib',
     paths: {
-        'app': '../app',
         'modules': '../modules',
-        'angular': 'angular',
-        'angular-route': 'angular-route',
-        'angular-cookies': 'angular-cookies',
-        'angular-resource': 'angular-resource',
-        'angular-sanitize': 'angular-sanitize'
+        'text': 'require/text',
+        'domReady': 'require/domReady',
     },
     shim: {
         'angular': {
             exports: 'angular'
         },
-        'angular-route': {
+        'angular/route': {
             deps: ['angular']
         },
-        'angular-cookies': {
+        'angular/cookies': {
             deps: ['angular']
         },
-        'angular-resource': {
+        'angular/resource': {
             deps: ['angular']
         },
-        'angular-sanitize': {
+        'angular/sanitize': {
             deps: ['angular']
         }
     }

@@ -1,0 +1,31 @@
+
+<article class="container pad-t-10 pad-b-10">
+  <div class="panel panel-default">
+    <h3 class="panel-heading mar-b-10">Lista de páginas</h3>
+    <div class="panel-body">
+      <div class="row mar-b-20">
+        <div class="col-lg-3">
+          <div class="input-group">
+            <input type="text" ng-model="searchText" class="form-control"/><span class="input-group-addon"><span class="icon-search"></span></span>
+          </div>
+        </div>
+      </div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Página</th>
+            <th>Descrição</th>
+            <th>Preview</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="page in pages | filter : searchText">
+            <td>{{page.name}}</td>
+            <td>{{page.description}}</td>
+            <td><a href="/telas/show/{{page.slug}}" class="link--unstyled fs-28"><span class="icon-file"></span></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,28 @@
+mixin lista(cols, rows)
+    each row in rows
+        tr
+            each col in cols
+                td!= row[col]
+
+div.wrapper.pad-t-40.pad-b-40
+    include includes/_header
+    article.content.pad-20
+        .rowflex.lista__header.align-items--baseline.mar-b-20
+            .colflex-9.breadcrumb.light.museo__sans-bold
+                a(href='#xxx')
+                    span.icon-location
+                a(href='#xxx') Cotações
+                a(href='#xxx') MultiCálculo Automóveis
+            .colflex-3.text--right
+                a.opts.opts--plus(href='#xxx')
+                    span.icon-plus
+                a.opts(href='#xxx')
+                    span.icon-filter
+        table.table.table-striped.table__action
+            thead
+                tr
+                    each col in cols
+                        th.text--center #{col}
+            tbody
+                - for (var x = 0; x < 10; x++)
+                    +lista(cols, rows)
