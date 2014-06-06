@@ -29,8 +29,7 @@ module.exports = function(grunt) {
                 options: {
                     jshintrc: '.jshintrc',
                     ignores: [
-                        pathDevJs + 'lib/**/*.js',
-                        pathDevJs + 'webApp.build.js'
+                        pathDevJs + 'lib/**/*.js'
                     ]
                 }
             }
