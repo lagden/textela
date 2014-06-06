@@ -10,15 +10,7 @@ CURR_FOLDER=`pwd`
 cd $CURR_FOLDER
 
 # Sync
-rsync $CURR_FOLDER/. lagden@lagden.webfactional.com:~/projects/tex --rsh ssh --recursive --delete --exclude-from $CURR_FOLDER/rsync_exclude.txt --verbose > rsync_exclude.log
-
-ssh -T lagden@lagden.webfactional.com <<EOF
-
-cd ~/projects/tex/.
-
-# Fix
-# bin/reset -s
-bin/fix -s
+rsync $CURR_FOLDER/build/. lagden@lagden.webfactional.com:~/webapps/texpreview --rsh ssh --recursive --delete --exclude-from $CURR_FOLDER/rsync_exclude.txt --verbose > rsync_exclude.log
 
 echo "                                "
 echo "< Deploy finalizado... Yeahh!! >"
@@ -29,8 +21,5 @@ echo "            (__)\       )\/\    "
 echo "                ||----w |       "
 echo "                ||     ||       "
 echo "                                "
-
-exit 0
-EOF
 
 exit 0

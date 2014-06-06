@@ -1,67 +1,49 @@
-$alpha: 0.7
+.login
+    box-sizing: border-box
+    color: $gray
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    margin: auto
+    width: 480px
+    height: 200px
+    padding: 20px
 
-.modal__login
-    +modal($color: #004076, $alpha: 1)
-    background-image: linear-gradient(top, #004076 0%,#004076 35%,#105675 100%)
-
-.modal__login--inside
-    +insideModal()
-    width: 320px
-    height: 500px
-    border-radius: $base-border-radius
-
-.login-header
-    position: relative
-    top: 45px
-    margin-bottom: 100px
-
-.frm--group
-    position: relative
-    display: block
-
-    > .icon--label
-        position: absolute
-        color: rgba($white, $alpha)
-        top: 9px
-        left: 23px
-        font-size: 21px
+.circle
+    border-radius: 50%
+    border: 2px solid $white
+    padding: 13px
 
 .frm-login
+    @extend .form-inline
     input[type=text],
-    input[type=password]
-        +placeholder(rgba($white, $alpha))
-        color: $white
-        background: transparent
-        border: 2px solid rgba($white, $alpha)
-        width: 90%
-        display: block
-        margin: 0 auto
-        margin-bottom: 10px
-        cursor: text
-        padding: 10px 33px
-        text-align: center
-        border-radius: $base-border-radius
+    input[type=password],
+    button
+        border-radius: 3px
         &:focus
             outline: none
+            box-shadow: none
 
+    input[type=text],
     input[type=password]
-        margin-bottom: 50px
+        color: $grayLightest
+        background-color: $grayDark
+        border: none
+        cursor: text
+        transition: background-color ease 0.25s
+        &:focus
+            background-color: lighten($grayDark, 10)
 
-    button[type=submit]
-        width: 90%
-        display: block
-        margin: 0 auto
-        background: transparent
-        color: rgba($white, $alpha)
-        border: 2px solid rgba($white, $alpha)
-        cursor: pointer
-        border-radius: $base-border-radius
-        padding: 10px
-        &:hover
-            border-color: transparent
-            background-color: $white
-            color: #004076
+.titles
+    vertical-align: center
+    color: white
 
-@media only screen and (min-width : 569px)
-    .modal__login--inside
-        background-color: rgba($black, 0.2)
+
+
+@media (max-width: $screen-sm-min)
+
+    .login
+        width: 320px
+        height: 300px
