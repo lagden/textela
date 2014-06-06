@@ -131,6 +131,7 @@ module.exports = function(grunt) {
                     'cp -r ' + pathDevDoc + '. ' + pathBuildDoc + '.',
                     'rm -rf ' + pathBuildDoc + 'js/*',
                     'cp ' + pathDevDoc + 'js/webApp.build.* ' + pathBuildDoc + 'js/.',
+                    'cp ' + pathDevDoc + 'js/util.webFont.js ' + pathBuildDoc + 'js/.',
                     'rm ' + pathDevDoc + 'js/webApp.build.*'
                 ].join(' ; '),
                 options: {
