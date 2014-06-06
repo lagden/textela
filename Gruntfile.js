@@ -76,6 +76,8 @@ module.exports = function(grunt) {
                     '<%= paths.devDoc %>telas/preview/lista.html': 'templates/telas/preview/lista.jade'
                 }, {
                     '<%= paths.devDoc %>telas/preview/login.html': 'templates/telas/preview/login.jade'
+                }, {
+                    '<%= paths.devDoc %>telas/preview/fechamento.html': 'templates/telas/preview/fechamento.jade'
                 }]
             },
             modules: {

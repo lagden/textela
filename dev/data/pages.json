@@ -6,4 +6,8 @@
     "name": "Tela de Login",
     "description": "Preview da tela de login",
     "slug": "login"
+}, {
+    "name": "Ícones fechamento",
+    "description": "Preview da tela de fechamento",
+    "slug": "fechamento"
 }]
