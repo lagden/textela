@@ -78,6 +78,8 @@ module.exports = function(grunt) {
                     '<%= paths.devDoc %>telas/preview/login.html': 'templates/telas/preview/login.jade'
                 }, {
                     '<%= paths.devDoc %>telas/preview/fechamento.html': 'templates/telas/preview/fechamento.jade'
+                }, {
+                    '<%= paths.devDoc %>telas/preview/fechamento-varia.html': 'templates/telas/preview/fechamento-varia.jade'
                 }]
             },
             modules: {

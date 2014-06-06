@@ -10,4 +10,8 @@
     "name": "Ícones fechamento",
     "description": "Preview da tela de fechamento",
     "slug": "fechamento"
+}, {
+    "name": "Ícones fechamento - Variação",
+    "description": "Preview da tela de fechamento",
+    "slug": "fechamento-varia"
 }]
