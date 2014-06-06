@@ -23,6 +23,9 @@ define('config', function() {
             },
             'angular/resource': {
                 deps: ['angular']
+            },
+            'angular/animate': {
+                deps: ['angular']
             }
         }
     });

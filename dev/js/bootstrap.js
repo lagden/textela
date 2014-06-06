@@ -4,6 +4,7 @@ define(function(require) {
 
     require('angular/route');
     require('angular/resource');
+    require('angular/animate');
 
     var angular = require('angular');
     var domReady = require('domReady');
@@ -24,7 +25,8 @@ define(function(require) {
         // Module
         angular.module(appModuleName, [
             'ngResource',
-            'ngRoute'
+            'ngRoute',
+            'ngAnimate'
         ]);
 
         // Config

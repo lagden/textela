@@ -26,7 +26,8 @@
       "require/domReady": "https://raw.github.com/requirejs/domReady/2.0.1/domReady.js",
       "angular": "https://raw.githubusercontent.com/angular/bower-angular/master/angular.js",
       "angular/route": "https://raw.githubusercontent.com/angular/bower-angular-route/master/angular-route.js",
-      "angular/resource": "https://raw.githubusercontent.com/angular/bower-angular-resource/master/angular-resource.js"
+      "angular/resource": "https://raw.githubusercontent.com/angular/bower-angular-resource/master/angular-resource.js",
+      "angular/animate": "https://raw.githubusercontent.com/angular/bower-angular-animate/master/angular-animate.js"
     }
   },
   "scripts": {
