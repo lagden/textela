@@ -9,11 +9,10 @@
         "Retorno",
         "Estrutura",
         "Produtor",
-        "Ação",
-        "Icons"
+        "Ação"
     ],
     "rows": [{
-        "Status": "<span class=\"icon-flag icon--green\"></span> <span class=\"icon-record icon--green\"></span>",
+        "Status": ["icon-record icon--green"],
         "Número": "12067",
         "Tipo": "Seguro Novo",
         "Nome do Segurado": "Jorge Ricardo da Silva",
@@ -22,10 +21,16 @@
         "Retorno": "Retornar Contato",
         "Estrutura": "TEx",
         "Produtor": "Lagden",
-        "Ação": "<a class=\"hidden\" title=\"Transferir cálculo\" href=\"#xxx\"><span class=\"icon-transfer\"></span></a>  <a title=\"Duplicar\" href=\"#xxx\"><span class=\"icon-copy\"></span></a> <a title=\"Fechamento\" href=\"#xxx\"><span class=\"icon-signup icon--disabled\"></span></a> <a title=\"Agendamento\" href=\"#xxx\"><span class=\"icon-calendar icon--disabled\"></span></a>",
-        "Icons": "<span class=\"icon-retweet\"></span> | <span class=\"icon-file\"></span> <span class=\"icon-envelope\"></span> | <span class=\"icon-file-pdf\"></span> <span class=\"icon-envelope-o\"></span>"
+        "Ação": [
+            "icon-refresh",
+            "icon-bolt",
+            "icon-copy",
+            "icon-signup icon--disabled",
+            "icon-clipboard-check icon--disabled",
+            "icon-calendar icon--disabled"
+        ]
     }, {
-        "Status": "<span class=\"icon-flag icon--yellow\"></span> <span class=\"icon-record icon--yellow\"></span>",
+        "Status": ["icon-record icon--yellow"],
         "Número": "12067",
         "Tipo": "Seguro Novo",
         "Nome do Segurado": "Jorge Ricardo da Silva",
@@ -34,10 +39,16 @@
         "Retorno": "Retornar Contato",
         "Estrutura": "TEx",
         "Produtor": "Lagden",
-        "Ação": "<a title=\"Transferir cálculo\" href=\"#xxx\"><span class=\"icon-transfer\"></span></a> <a class=\"hidden\" title=\"Duplicar\" href=\"#xxx\"><span class=\"icon-copy\"></span></a> <a title=\"Fechamento\" href=\"#xxx\"><span class=\"icon-signup icon--green\"></span></a> <a title=\"Agendamento\" href=\"#xxx\"><span class=\"icon-calendar icon--red\"></span></a>",
-        "Icons": "<span class=\"icon-retweet\"></span> | <span class=\"icon-file\"></span> <span class=\"icon-envelope\"></span> | <span class=\"icon-file-pdf\"></span> <span class=\"icon-envelope-o\"></span>"
+        "Ação": [
+            "icon-refresh",
+            "icon-bolt",
+            "icon-copy",
+            "icon-signup icon--disabled",
+            "icon-clipboard-check icon--disabled",
+            "icon-calendar icon--disabled"
+        ]
     }, {
-        "Status": "<span class=\"icon-flag icon--red\"></span> <span class=\"icon-record icon--red\"></span>",
+        "Status": ["icon-record icon--red"],
         "Número": "12067",
         "Tipo": "Seguro Novo",
         "Nome do Segurado": "Jorge Ricardo da Silva",
@@ -46,7 +57,16 @@
         "Retorno": "Retornar Contato",
         "Estrutura": "TEx",
         "Produtor": "Lagden",
-        "Ação": "<a title=\"Transferir cálculo\" href=\"#xxx\"><span class=\"icon-transfer\"></span></a> <a class=\"hidden\" title=\"Duplicar\" href=\"#xxx\"><span class=\"icon-copy\"></span></a> <a title=\"Fechamento\" href=\"#xxx\"><span class=\"icon-signup icon--green\"></span></a> <a title=\"Agendamento\" href=\"#xxx\"><span class=\"icon-calendar icon--red\"></span></a>",
-        "Icons": "<span class=\"icon-retweet\"></span> | <span class=\"icon-file\"></span> <span class=\"icon-envelope\"></span> | <span class=\"icon-file-pdf\"></span> <span class=\"icon-envelope-o\"></span>"
+        "Ação": [
+            "icon-refresh",
+            "icon-bolt",
+            "icon-copy",
+            "icon-signup icon--disabled",
+            "icon-clipboard-check icon--disabled",
+            "icon-calendar",
+            "icon-file-pdf",
+            "icon-envelope-o",
+            "icon-tag"
+        ]
     }]
 }

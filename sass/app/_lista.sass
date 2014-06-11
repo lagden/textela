@@ -28,13 +28,10 @@
             > td
                 vertical-align: middle
 
-.table__action
-    > tbody > tr > td:nth-last-of-type(2),
+.table--action
+    > tbody > tr > td:first-of-type
+        text-align: center
     > tbody > tr > td:last-of-type
         @extend .nowrap
-        font-size: 1.3em
-        a
-            @extend .link--unstyled
-            display: inline-block
-            vertical-align: middle
-            margin: 0 5px 0
+        font-size: 1.5em
+        text-align: center
