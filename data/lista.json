@@ -22,8 +22,8 @@
         "Estrutura": "TEx",
         "Produtor": "Lagden",
         "Ação": [
-            "icon-refresh",
-            "icon-bolt",
+            "icon-file-pdf",
+            "icon-email",
             "icon-copy",
             "icon-signup icon--disabled",
             "icon-clipboard-check icon--disabled",
@@ -40,12 +40,11 @@
         "Estrutura": "TEx",
         "Produtor": "Lagden",
         "Ação": [
-            "icon-refresh",
-            "icon-bolt",
-            "icon-copy",
-            "icon-signup icon--disabled",
-            "icon-clipboard-check icon--disabled",
-            "icon-calendar icon--disabled"
+            "icon-file-pdf",
+            "icon-envelope-o",
+            "icon-signup",
+            "icon-clipboard-check",
+            "icon-calendar"
         ]
     }, {
         "Status": ["icon-record icon--red"],
@@ -58,14 +57,9 @@
         "Estrutura": "TEx",
         "Produtor": "Lagden",
         "Ação": [
-            "icon-refresh",
-            "icon-bolt",
             "icon-copy",
-            "icon-signup icon--disabled",
-            "icon-clipboard-check icon--disabled",
-            "icon-calendar",
-            "icon-file-pdf",
-            "icon-envelope-o",
+            "icon-signup",
+            "icon-clipboard-check",
             "icon-tag"
         ]
     }]

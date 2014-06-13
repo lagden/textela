@@ -26,12 +26,51 @@
         > tr
             > th,
             > td
-                vertical-align: middle
+                vertical-align: baseline
+
+// Responsive table
+$breakpoint-alpha: 640px
 
 .table--action
-    > tbody > tr > td:first-of-type
-        text-align: center
+    > tbody > tr > td:first-of-type,
+    > tbody > tr > td:last-of-type
+        text-align: left
+        @media (min-width: $breakpoint-alpha)
+            text-align: center
     > tbody > tr > td:last-of-type
         @extend .nowrap
-        font-size: 1.5em
-        text-align: center
+        > span
+            font-size: 24px
+
+    @media only screen and (max-width: 1100px)
+        > tbody > tr > td,
+        > thead > tr > th
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6)
+                display: none
+
+.rwd-table
+    > thead > tr > th
+        display: none
+
+    > tbody > tr > td
+        display: block
+        &:before
+            content: attr(data-th)": "
+            font-weight: bold
+            width: 6.5em
+            display: inline-block
+            @media (min-width: $breakpoint-alpha)
+                display: none
+
+        &:last-of-type
+            text-align: center
+            &:before
+                display: none
+    > thead > tr > th,
+    > tbody > tr > td
+        @media (min-width: $breakpoint-alpha)
+            display: table-cell
