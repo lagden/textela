@@ -3,8 +3,9 @@
     min-height: 100%
     overflow: hidden
 
-.view-animate.ng-enter, .view-animate.ng-leave
-    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s
+.view-animate.ng-enter,
+.view-animate.ng-leave
+    transition: left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)
 
     display: block
     width: 100%
@@ -24,3 +25,16 @@
 
 .view-animate.ng-leave.ng-leave-active
     left: -100%
+
+
+.list-animate.ng-enter,
+.list-animate.ng-leave
+    transition: opacity 0.4s cubic-bezier(0.250, 0.250, 0.750, 0.750)
+
+.list-animate.ng-enter.ng-enter-active,
+.list-animate.ng-leave
+    opacity: 1
+
+.list-animate.ng-leave.ng-leave-active,
+.list-animate.ng-enter
+    opacity: 0

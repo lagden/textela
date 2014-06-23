@@ -1,0 +1,40 @@
+div.wrapper.pad-t-40.pad-b-40
+    include includes/_header
+    article.content.pad-20.pad-t-40
+        ul.nav.nav-pills.mar-b-20
+            li.active.dropdown
+                a.dropdown-toggle(data-toggle='dropdown', href='#', role='button')
+                    | Atalhos
+                    span.caret
+                ul.dropdown-menu(role='menu')
+                    li
+                        a(href='#') Action
+                    li
+                        a(href='#') Another action
+                    li.divider
+                    li
+                        a(href='#') Separated link
+
+        .row
+            .col-md-8
+                .panel.panel-default.mar-b-20
+                    .panel-heading Pendências
+                    .panel-body
+                        ul.list-group
+                            li.list-group-item
+                                span.badge 14
+                                | Cotações pendentes
+                            li.list-group-item
+                                span.badge 3
+                                | Segurados com sinistros
+
+                .panel.panel-default.mar-b-20
+                    .panel-heading Informativo
+                    .panel-body
+                        ul.list-group
+                            li.list-group-item
+                                | Por dar entrevista à Playboy, Feliciano pode perder o título de pastor
+                            li.list-group-item
+                                | Gramacho: Impresiones de la vida en el vertedero
+            div.col-md-4
+                | some stuff

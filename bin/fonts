@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var program = require('commander');
+
+program
+    .version('0.1.0')
+    .command('update [fonts]', 'update one or more fonts')
+    .parse(process.argv);

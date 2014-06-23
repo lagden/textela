@@ -15,10 +15,10 @@ article.container.pad-t-10.pad-b-10
                 th Descrição
                 th Preview
             tbody
-              tr(ng-repeat='page in pages | filter : searchText')
-                td {{page.name}}
-                td {{page.description}}
+              tr.list-animate(ng-repeat='page in pages | filter : searchText')
                 td
                     a.link--unstyled.fs-28(href='#!/telas/show/{{page.slug}}')
                         span.icon-file
+                td {{page.name}}
+                td {{page.description}}
 

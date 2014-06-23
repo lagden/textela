@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var fs = require('fs');
+var async = require('async');
+var program = require('commander');
+
+console.log();
+
+program
+    .parse(process.argv);
+
+var fonts = program.args;
+
+if (!fonts.length) {
+    console.error('fonts required');
+    process.exit(1);
+}
+
+var series = [];
+fonts.forEach(function(font) {
+    series.push(function(callback) {
+        var file = 'guide/fonts/' + font + '.svg'
+        fs.stat(file, function(err, stats) {
+            // if (stats)
+            //     console.log(stats.isFile());
+            callback(err, file);
+        });
+    })
+});
+
+async.series(series, function(err, results) {
+    if (err) {
+        console.log('Not found %s', results);
+        process.exit(1);
+    }
+    console.log('Updated: \n%s', ' - ' + results.join('\n - '));
+    console.log();
+});
+

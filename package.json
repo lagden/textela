@@ -7,6 +7,8 @@
   },
   "license": "BSD",
   "devDependencies": {
+    "async": "^0.9.0",
+    "commander": "^2.2.0",
     "grunt": "~0.4.x",
     "grunt-contrib-clean": "~0.5.x",
     "grunt-contrib-compass": "~0.7.x",
@@ -21,6 +23,8 @@
     "baseUrl": "dev/js/lib",
     "dependencies": {
       "almond": "https://raw.githubusercontent.com/jrburke/almond/master/almond.js",
+      "jquery": "http://code.jquery.com/jquery-2.1.0.js",
+      "twbs/dropdown": "https://raw.githubusercontent.com/twbs/bootstrap/master/js/dropdown.js",
       "require": "github:jrburke/requirejs/2.1.13",
       "require/text": "github:requirejs/text/2.0.12",
       "require/domReady": "https://raw.github.com/requirejs/domReady/2.0.1/domReady.js",

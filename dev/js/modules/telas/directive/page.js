@@ -11,6 +11,7 @@ define(function() {
                     cache: $templateCache
                 }).success(function(tplContent) {
                     iElement.replaceWith($compile(tplContent)(scope));
+                    // $(iElement).html(tplContent);
                 });
             }
         };

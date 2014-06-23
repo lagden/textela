@@ -19,10 +19,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="page in pages | filter : searchText">
+          <tr ng-repeat="page in pages | filter : searchText" class="list-animate">
+            <td><a href="#!/telas/show/{{page.slug}}" class="link--unstyled fs-28"><span class="icon-file"></span></a></td>
             <td>{{page.name}}</td>
             <td>{{page.description}}</td>
-            <td><a href="#!/telas/show/{{page.slug}}" class="link--unstyled fs-28"><span class="icon-file"></span></a></td>
           </tr>
         </tbody>
       </table>
