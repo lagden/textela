@@ -37,6 +37,29 @@ define([
             var $el = $(event.currentTarget);
             var method = ($el[0].checked) ? 'removeClass' : 'addClass';
             $($el.data('target'))[method]('hidden');
+
+            // update || save
+            var atalhos = [];
+            var $checkboxes = $('[data-toggle="atalhos"]');
+            for (var i = 0, len = $checkboxes.length; i < len; i++) {
+                atalhos.push({
+                    target: $checkboxes[i].getAttribute('data-target'),
+                    enable: $checkboxes[i].checked
+                });
+            }
+
+            $.ajax({
+                url: '/data/save.json',
+                data: {
+                    'userId': 123,
+                    'atalhos': atalhos
+                }
+            }).done(function(res) {
+                if (res.success)
+                    console.log('atualizado', res, atalhos);
+            }).fail(function() {
+                console.log('fail');
+            });
         });
 
     return telas;

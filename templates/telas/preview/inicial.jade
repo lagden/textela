@@ -40,6 +40,12 @@ div.wrapper.pad-t-40.pad-b-40
                 - var titles = ['Por dar entrevista à Playboy, Feliciano pode perder o título de pastor', 'Gramacho: Impresiones de la vida en el vertedero', 'Tu teami prei veri gudi! From birráind, from de léfiti, from de raiti! My equipe pray veri naici.', 'Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga.']
                 h4.text-primary.mar-b-10 Informativo
                 ul#inicialInformativo.list-group
+                    li.list-group-item.list-group-item-info
+                        span.icon-record.hand.pull-left.mar-r-5
+                        a.bl.overflow--hidden(data-toggle='modal', href='/remote.html', data-target='#modal') Item que não foi lido 1
+                    li.list-group-item.list-group-item-info
+                        span.icon-record.hand.pull-left.mar-r-5
+                        a.bl.overflow--hidden(data-toggle='modal', href='/remote.html', data-target='#modal') Item que não foi lido 2
                     each title in titles
                         li.list-group-item
                             span.icon-times.hand.pull-left.mar-r-5(data-remove='informativo')
