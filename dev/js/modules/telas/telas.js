@@ -22,10 +22,22 @@ define([
 
     // Tela inicial
     // Remove os informativos
-    $(document).on('click.informativo', '[data-remove="informativo"]', function(event){
-        var $el = $(event.currentTarget);
-        $el.parent().remove();
-    });
+    $(document)
+        .on('click.informativo', '[data-remove="informativo"]', function(event) {
+            var $el = $(event.currentTarget);
+            $el.parent().remove();
+        })
+        .on('click.dropdown', '.dropdown-menu', function(event) {
+            var $el = $(event.currentTarget);
+            if ($el.hasClass('dropdown-menu-form')) {
+                event.stopPropagation();
+            }
+        })
+        .on('click.atalho', '[data-toggle="atalhos"]', function(event) {
+            var $el = $(event.currentTarget);
+            var method = ($el[0].checked) ? 'removeClass' : 'addClass';
+            $($el.data('target'))[method]('hidden');
+        });
 
     return telas;
 });

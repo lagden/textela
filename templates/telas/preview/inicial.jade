@@ -6,14 +6,25 @@ div.wrapper.pad-t-40.pad-b-40
                 a.dropdown-toggle(data-toggle='dropdown', href='#', role='button')
                     | Atalhos
                     span.caret
-                ul.dropdown-menu(role='menu')
+                ul.dropdown-menu.dropdown-menu-form(role='menu')
                     li
-                        a(href='#!/telas') Action
+                        label
+                            input.mar-r-5(type='checkbox', value='1', data-toggle='atalhos', data-target='#atalhoAction')
+                            | Action
                     li
-                        a(href='#!/telas') Another action
-                    li.divider
+                        label
+                            input.mar-r-5(type='checkbox', value='1', data-toggle='atalhos', data-target='#atalhoOutra')
+                            | Outra
                     li
-                        a(href='#!/telas') Separated link
+                        label
+                            input.mar-r-5(type='checkbox', value='1', data-toggle='atalhos', data-target='#atalhoSinistro')
+                            | Sinistros
+            li#atalhoAction.hidden
+                a(href='#!/telas') Action
+            li#atalhoOutra.hidden
+                a(href='#!/telas') Outra
+            li#atalhoSinistro.hidden
+                a(href='#!/telas') Sinistros
 
         .row
             .col-md-8
@@ -32,7 +43,7 @@ div.wrapper.pad-t-40.pad-b-40
                     each title in titles
                         li.list-group-item
                             span.icon-times.hand.pull-left.mar-r-5(data-remove='informativo')
-                            a.bl.overflow--hidden(data-toggle='modal' href='/remote.html' data-target='#modal') #{title}
+                            a.bl.overflow--hidden(data-toggle='modal', href='/remote.html', data-target='#modal') #{title}
             .col-md-4
                 h4.text-primary.center-block.mar-b-10 Ranking
                 hr.mar-b-10

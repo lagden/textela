@@ -18,13 +18,27 @@
   <article class="content pad-20 pad-t-40">
     <ul class="nav nav-pills mar-b-20">
       <li class="active dropdown"><a data-toggle="dropdown" href="#" role="button" class="dropdown-toggle">Atalhos<span class="caret"></span></a>
-        <ul role="menu" class="dropdown-menu">
-          <li><a href="#!/telas">Action</a></li>
-          <li><a href="#!/telas">Another action</a></li>
-          <li class="divider"></li>
-          <li><a href="#!/telas">Separated link</a></li>
+        <ul role="menu" class="dropdown-menu dropdown-menu-form">
+          <li>
+            <label>
+              <input type="checkbox" value="1" data-toggle="atalhos" data-target="#atalhoAction" class="mar-r-5"/>Action
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" value="1" data-toggle="atalhos" data-target="#atalhoOutra" class="mar-r-5"/>Outra
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" value="1" data-toggle="atalhos" data-target="#atalhoSinistro" class="mar-r-5"/>Sinistros
+            </label>
+          </li>
         </ul>
       </li>
+      <li id="atalhoAction" class="hidden"><a href="#!/telas">Action</a></li>
+      <li id="atalhoOutra" class="hidden"><a href="#!/telas">Outra</a></li>
+      <li id="atalhoSinistro" class="hidden"><a href="#!/telas">Sinistros</a></li>
     </ul>
     <div class="row">
       <div class="col-md-8">
