@@ -2,7 +2,6 @@ define(function(require) {
 
     'use strict';
 
-    require('twbs/dropdown');
     require('angular/route');
     require('angular/resource');
     require('angular/animate');

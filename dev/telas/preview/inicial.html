@@ -16,7 +16,7 @@
     <form action="#xxx" method="get" class="colflex-2 frm">
       <div class="search">
         <input type="search" name="q" placeholder="Pesquisa..."/>
-        <button type="submit" class="btn btn__search"><span class="icon-search"></span></button>
+        <button type="submit" class="butn butn__search"><span class="icon-search"></span></button>
       </div>
     </form>
     <div class="colflex-4 toolbelt text--right"><a href="#xxx" class="mar-r-20"><span class="logotipo-marsh"></span></a><a href="#xxx" class="separador"><span class="icon-cog"></span></a><a href="#xxx"><span class="icon-headset"></span></a><a href="#xxx"><span class="icon-switch"></span></a></div>
@@ -34,26 +34,64 @@
     </ul>
     <div class="row">
       <div class="col-md-8">
-        <div class="panel panel-default mar-b-20">
-          <div class="panel-heading">Pendências</div>
-          <div class="panel-body">
-            <ul class="list-group">
-              <li class="list-group-item"><span class="badge">14</span>Cotações pendentes</li>
-              <li class="list-group-item"><span class="badge">3</span>Segurados com sinistros</li>
-            </ul>
-          </div>
-        </div>
-        <div class="panel panel-default mar-b-20">
-          <div class="panel-heading">Informativo</div>
-          <div class="panel-body">
-            <ul class="list-group">
-              <li class="list-group-item">Por dar entrevista à Playboy, Feliciano pode perder o título de pastor</li>
-              <li class="list-group-item">Gramacho: Impresiones de la vida en el vertedero</li>
-            </ul>
-          </div>
-        </div>
+        <h4 class="text-primary mar-b-10">Pendências</h4>
+        <ul class="list-group mar-b-20">
+          <li class="list-group-item"><span class="badge">14</span>Cotações pendentes</li>
+          <li class="list-group-item"><span class="badge">3</span>Segurados com sinistros</li>
+        </ul>
+        <h4 class="text-primary mar-b-10">Informativo</h4>
+        <ul id="inicialInformativo" class="list-group">
+          <li class="list-group-item"><span data-remove="informativo" class="icon-times hand pull-left mar-r-5"></span><a data-toggle="modal" href="/remote.html" data-target="#modal" class="bl overflow--hidden">Por dar entrevista à Playboy, Feliciano pode perder o título de pastor</a></li>
+          <li class="list-group-item"><span data-remove="informativo" class="icon-times hand pull-left mar-r-5"></span><a data-toggle="modal" href="/remote.html" data-target="#modal" class="bl overflow--hidden">Gramacho: Impresiones de la vida en el vertedero</a></li>
+          <li class="list-group-item"><span data-remove="informativo" class="icon-times hand pull-left mar-r-5"></span><a data-toggle="modal" href="/remote.html" data-target="#modal" class="bl overflow--hidden">Tu teami prei veri gudi! From birráind, from de léfiti, from de raiti! My equipe pray veri naici.</a></li>
+          <li class="list-group-item"><span data-remove="informativo" class="icon-times hand pull-left mar-r-5"></span><a data-toggle="modal" href="/remote.html" data-target="#modal" class="bl overflow--hidden">Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga.</a></li>
+        </ul>
       </div>
-      <div class="col-md-4">some stuff</div>
+      <div class="col-md-4">
+        <h4 class="text-primary center-block mar-b-10">Ranking</h4>
+        <hr class="mar-b-10"/>
+        <div class="nav__ranking text--center mar-b-10">
+          <p class="lead text-info">Junho 2014</p>
+          <div class="navs navs__left icon-arrow-left text-info"></div>
+          <div class="navs navs__right icon-arrow-right text-info"></div>
+        </div>
+        <table class="table table-hover mar-b-10">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Produtor</th>
+              <th>Prêmio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John Doe</td>
+              <td>R$ 10.000,00</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>John Doe</td>
+              <td>R$ 10.000,00</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>John Doe</td>
+              <td>R$ 10.000,00</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>John Doe</td>
+              <td>R$ 10.000,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </article>
+</div>
+<div id="modal" tabindex="-1" role="dialog" aria-labelledby="Informativo" aria-hidden="true" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content"></div>
+  </div>
 </div>

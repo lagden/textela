@@ -17,24 +17,45 @@ div.wrapper.pad-t-40.pad-b-40
 
         .row
             .col-md-8
-                .panel.panel-default.mar-b-20
-                    .panel-heading Pendências
-                    .panel-body
-                        ul.list-group
-                            li.list-group-item
-                                span.badge 14
-                                | Cotações pendentes
-                            li.list-group-item
-                                span.badge 3
-                                | Segurados com sinistros
+                h4.text-primary.mar-b-10 Pendências
+                ul.list-group.mar-b-20
+                    li.list-group-item
+                        span.badge 14
+                        | Cotações pendentes
+                    li.list-group-item
+                        span.badge 3
+                        | Segurados com sinistros
 
-                .panel.panel-default.mar-b-20
-                    .panel-heading Informativo
-                    .panel-body
-                        ul.list-group
-                            li.list-group-item
-                                | Por dar entrevista à Playboy, Feliciano pode perder o título de pastor
-                            li.list-group-item
-                                | Gramacho: Impresiones de la vida en el vertedero
-            div.col-md-4
-                | some stuff
+                - var titles = ['Por dar entrevista à Playboy, Feliciano pode perder o título de pastor', 'Gramacho: Impresiones de la vida en el vertedero', 'Tu teami prei veri gudi! From birráind, from de léfiti, from de raiti! My equipe pray veri naici.', 'Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga.']
+                h4.text-primary.mar-b-10 Informativo
+                ul#inicialInformativo.list-group
+                    each title in titles
+                        li.list-group-item
+                            span.icon-times.hand.pull-left.mar-r-5(data-remove='informativo')
+                            a.bl.overflow--hidden(data-toggle='modal' href='/remote.html' data-target='#modal') #{title}
+            .col-md-4
+                h4.text-primary.center-block.mar-b-10 Ranking
+                hr.mar-b-10
+                .nav__ranking.text--center.mar-b-10
+                    p.lead.text-info Junho 2014
+                    .navs.navs__left.icon-arrow-left.text-info
+                    .navs.navs__right.icon-arrow-right.text-info
+
+                table.table.table-hover.mar-b-10
+                    thead
+                        tr
+                            th #
+                            th Produtor
+                            th Prêmio
+                    tbody
+                        - for (var x = 1; x < 5; x++)
+                            tr
+                                td #{x}
+                                td John Doe
+                                td R$ 10.000,00
+
+//- Modal 
+#modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='Informativo', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+

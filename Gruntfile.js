@@ -88,9 +88,11 @@ module.exports = function(grunt) {
                     pretty: true,
                     data: grunt.file.readJSON('data/lista.json')
                 },
-                files: {
+                files: [{
                     '<%= paths.devDoc %>js/modules/telas/view/lista.html': 'templates/telas/lista.jade'
-                }
+                }, {
+                    '<%= paths.devDoc %>remote.html': 'templates/telas/remote.jade'
+                }]
             }
         },
         watch: {
