@@ -24,8 +24,8 @@
     "dependencies": {
       "almond": "https://raw.githubusercontent.com/jrburke/almond/master/almond.js",
       "jquery": "http://code.jquery.com/jquery-2.1.0.js",
-      "twbs/dropdown": "https://raw.githubusercontent.com/twbs/bootstrap/master/js/dropdown.js",
-      "twbs/modal": "https://raw.githubusercontent.com/twbs/bootstrap/master/js/modal.js",
+      "twbs/dropdown": "https://raw.githubusercontent.com/lagden/bootstrap/umd/js/dropdown.js",
+      "twbs/modal": "https://raw.githubusercontent.com/lagden/bootstrap/umd/js/modal.js",
       "require": "github:jrburke/requirejs/2.1.13",
       "require/text": "github:requirejs/text/2.0.12",
       "require/domReady": "https://raw.github.com/requirejs/domReady/2.0.1/domReady.js",

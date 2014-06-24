@@ -1,6 +1,6 @@
 $sizeH: image-height('sprites/logotipo/tex.png')
 
-.header__main
+.header__va--center
     min-height: $sizeH
     line-height: $sizeH
 
@@ -51,20 +51,22 @@ $lessSearch: 30
 .separador
     position: relative
     &:before
-        left: -22px
-        top: -5px
+        $h: 28px
+        left: -115%
+        width: 1px
+        height: $h
+        top: 50%
+        margin-top: -($h / 2)
+        margin-left: 10px
         position: absolute
         content: ''
-        width: 1px
-        height: 28px
         display: block
         background: rgba(white, 0.5)
-        margin-left: 10px
 
 .toolbelt
     > a
         @extend .link--white
-        font-size: 1.1em
+        font-size: 1.2em
         display: inline-block
-        vertical-align: baseline
+        vertical-align: middle
         margin-left: 5px
