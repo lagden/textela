@@ -42,17 +42,6 @@
         > a
             @extend .link--unstyled
 
-$omarBlue: #6B99CB
-.navybar__custom--blue
-    background-color: $omarBlue
-    color: $white
-    > li
-        &.divider
-            &:after
-                background: $white
-        + li:after
-            border-left-color: $omarBlue
-
 .navybar__bread
     > li
         vertical-align: middle
@@ -80,7 +69,22 @@ $omarBlue: #6B99CB
             border-left: 15px solid $grayLightest
             left: -3px
 
-.navybar__bread--blue
-    > li
-        + li:after
-            border-left-color: $omarBlue
+
+$supercores: ("blue" #6B99CB) ("blueOmar" #008ed6)
+@each $c in $supercores
+    $n: nth($c, 1)
+    $h: nth($c, 2)
+    .navybar__custom--#{$n}
+        background-color: $h
+        color: $white
+        > li
+            &.divider
+                &:after
+                    background: $white
+            + li:after
+                border-left-color: $h
+
+    .navybar__bread--#{$n}
+        > li
+            + li:after
+                border-left-color: $h
