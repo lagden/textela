@@ -12,17 +12,20 @@ mixin lista(cols, rows)
 div.wrapper.pad-t-40.pad-b-40
     include includes/_header
     article.content.pad-20.pad-t-40
-        .rowflex.lista__header.align-items--baseline.mar-b-20
-            .colflex-9.breadcrumb.light.museo__sans-bold
-                a(href='#!/telas')
-                    span.icon-location
-                a(href='#!/telas') Cotações
-                a(href='#!/telas') MultiCálculo Automóveis
-            .colflex-3.text--right
-                a.opts.opts--plus(href='#!/telas')
-                    span.icon-plus
-                a.opts(href='#!/telas')
-                    span.icon-filter
+       ul.navybar.navybar--fit.navybar__custom.mar-b-20
+            li.pad-10
+                a.icon-location.fs-24(href='#!/telas')
+            li.bigger
+                ul.navybar.navybar__bread
+                    li
+                        a(href='#!/telas')
+                            b Cotações
+                    li MultiCálculo Automóveis
+            li.pad-5.pad-l-10
+                a.icon-plus.fs-18(href='#!/telas')
+            li.pad-5.pad-r-10
+                a.icon-filter.fs-18(href='#!/telas')
+
         table.table.table-striped.table--action.rwd-table
             thead
                 tr
