@@ -27,7 +27,8 @@
             "icon-copy",
             "icon-signup icon--disabled",
             "icon-clipboard-check icon--disabled",
-            "icon-calendar icon--disabled"
+            "icon-calendar icon--disabled",
+            "icon-transfer"
         ]
     }, {
         "Status": ["icon-record icon--yellow"],
