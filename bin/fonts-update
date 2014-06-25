@@ -18,19 +18,55 @@ if (!fonts.length) {
     process.exit(1);
 }
 
-var series = [];
+function base64(file) {
+    var data = fs.readFileSync(file);
+    return new Buffer(data).toString('base64');
+}
+
+function rewrite(file, base64, fontName) {
+    var content = fs.readFileSync(file).toString();
+    var reg = new RegExp("(font-family: )'" + fontName + "'([\\s\\S]+)src: url\\(data:(.*),(.*)\\) format\\('([\\w\\d]+)'\\)", "gi");
+    var result = content.replace(reg, "$1'" + fontName + "'$2src: url(data:$3," + base64 + ") format('$5')");
+    return result;
+}
+
+var parallels = [];
+var files = {
+    '.svg': 'sass/fonts-win.sass',
+    '.woff': 'sass/fonts.sass',
+    '.eot': 'dev/fonts'
+};
+
 fonts.forEach(function(font) {
-    series.push(function(callback) {
-        var file = 'guide/fonts/' + font + '.svg'
-        fs.stat(file, function(err, stats) {
-            // if (stats)
-            //     console.log(stats.isFile());
-            callback(err, file);
+    Object.keys(files).forEach(function(ext) {
+        parallels.push(function(callback) {
+            var fontFile = 'guide/fonts/' + font + ext;
+            fs.exists(fontFile, function(exists) {
+                if (exists) {
+                    if (ext === '.eot') {
+                        var writer = fs.createWriteStream(files[ext] + '/' + font + ext);
+                        var reader = fs.createReadStream(fontFile);
+                        reader.pipe(writer, {
+                            end: false
+                        });
+                        reader.on('end', function() {
+                            callback(false, fontFile);
+                        });
+                    } else {
+                        fs.writeFile(files[ext], rewrite(files[ext], base64(fontFile), font), function(err) {
+                            callback(err, fontFile);
+                        });
+                    }
+
+                } else {
+                    callback(true, fontFile);
+                }
+            });
         });
-    })
+    });
 });
 
-async.series(series, function(err, results) {
+async.parallel(parallels, function(err, results) {
     if (err) {
         console.log('Not found %s', results);
         process.exit(1);
@@ -38,4 +74,3 @@ async.series(series, function(err, results) {
     console.log('Updated: \n%s', ' - ' + results.join('\n - '));
     console.log();
 });
-

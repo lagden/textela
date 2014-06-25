@@ -1,0 +1,75 @@
+.navybar
+    @extend .clearfix
+    list-style: none
+    margin-left: 0
+    > li
+        &,
+        > a
+            display: inline-block
+            @extend .link--unstyled
+
+.navybar--fit
+    display: table
+    width: 100%
+    > li
+        display: table-cell
+        vertical-align: middle
+        > a
+            display: block
+
+.navybar__custom
+    @extend .museoSans300
+    overflow: hidden
+    border-radius: $base-border-radius
+    background-color: $gray
+    color: $black
+    > li
+        &.bigger
+            width: 99%
+        &.divider
+            position: relative
+            &:after
+                $h: 28px
+                width: 1px
+                height: $h
+                top: 50%
+                margin-top: -($h / 2)
+
+                position: absolute
+                content: ' '
+                display: block
+                background: $white
+        > a
+            @extend .link--unstyled
+
+$omarBlue: #6B99CB
+.navybar__custom--blue
+    background-color: $omarBlue
+    color: $white
+
+.navybar--bread
+    > li
+        vertical-align: middle
+        position: relative
+        + li
+            padding-left: 25px
+        + li:before,
+        + li:after
+            top: 50%
+            margin-top: -30px
+            border: solid transparent
+            content: ' '
+            height: 0
+            width: 0
+            position: absolute
+            pointer-events: none
+        + li:before
+            left: -2px
+            border-top: 30px solid transparent
+            border-bottom: 30px solid transparent
+            border-left: 15px solid $white
+        + li:after
+            border-top: 30px solid transparent
+            border-bottom: 30px solid transparent
+            border-left: 15px solid $omarBlue
+            left: -3px

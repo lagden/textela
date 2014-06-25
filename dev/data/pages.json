@@ -18,4 +18,8 @@
     "name": "Ícones fechamento - Variação",
     "description": "Preview da tela de fechamento",
     "slug": "fechamento-varia"
+}, {
+    "name": "Barras",
+    "description": "Preview das barras",
+    "slug": "barras"
 }]

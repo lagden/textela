@@ -1,66 +1,66 @@
-$lnk-height: 32px
-$lnk-padding: 0 10px 0 20px
-$lnk-first-and-last-padding: $lnk-height / 2
-$lnk-after-before-border-width-1: $lnk-first-and-last-padding + 1
-$lnk-after-before-border-width-2: 10px
+// $lnk-height: 32px
+// $lnk-padding: 0 10px 0 20px
+// $lnk-first-and-last-padding: $lnk-height / 2
+// $lnk-after-before-border-width-1: $lnk-first-and-last-padding + 1
+// $lnk-after-before-border-width-2: 10px
 
-.breadcrumb
-    margin: 0
-    padding: 0
-    // border-width: 1px
-    // border-style: solid
-    a
-        @extend .link--unstyled
-        display: inline-block
-        vertical-align: middle
-        height: $lnk-height
-        line-height: $lnk-height
-        padding: $lnk-padding
-        position: relative
-        &:first-child
-            padding-left: $lnk-first-and-last-padding
-            border-radius: $base-border-radius 0 0 $base-border-radius
-            font-size: 22px
+// .breadcrumb
+//     margin: 0
+//     padding: 0
+//     // border-width: 1px
+//     // border-style: solid
+//     a
+//         @extend .link--unstyled
+//         display: inline-block
+//         vertical-align: middle
+//         height: $lnk-height
+//         line-height: $lnk-height
+//         padding: $lnk-padding
+//         position: relative
+//         &:first-child
+//             padding-left: $lnk-first-and-last-padding
+//             border-radius: $base-border-radius 0 0 $base-border-radius
+//             font-size: 22px
 
-        &:last-child
-            padding-right: $lnk-first-and-last-padding
-            pointer-events: none
-            cursor: default
-            &:after, &:before
-                border: 0
+//         &:last-child
+//             padding-right: $lnk-first-and-last-padding
+//             pointer-events: none
+//             cursor: default
+//             &:after, &:before
+//                 border: 0
 
 
-        &:after, &:before
-            content: " "
-            display: block
-            width: 0
-            height: 0
-            border-top: $lnk-after-before-border-width-1 solid transparent
-            border-bottom: $lnk-after-before-border-width-1 solid transparent
-            border-left: $lnk-after-before-border-width-2 solid transparent
-            position: absolute
-            margin: auto
-            top: 0
-            bottom: 0
-            left: 100%
-            z-index: 2
+//         &:after, &:before
+//             content: " "
+//             display: block
+//             width: 0
+//             height: 0
+//             border-top: $lnk-after-before-border-width-1 solid transparent
+//             border-bottom: $lnk-after-before-border-width-1 solid transparent
+//             border-left: $lnk-after-before-border-width-2 solid transparent
+//             position: absolute
+//             margin: auto
+//             top: 0
+//             bottom: 0
+//             left: 100%
+//             z-index: 2
 
-        &:before
-            margin-left: 1px
-            z-index: 1
+//         &:before
+//             margin-left: 1px
+//             z-index: 1
 
-.light
-    // border-color: $grayLightest
-    a
-        color: $gray
-        background-color: $whiteDark
-        &:after
-            border-left-color: $whiteDark
-        &:before
-            border-left-color: $grayLightest
+// .light
+//     // border-color: $grayLightest
+//     a
+//         color: $gray
+//         background-color: $whiteDark
+//         &:after
+//             border-left-color: $whiteDark
+//         &:before
+//             border-left-color: $grayLightest
 
-        &:hover, &:focus
-            color: $red
+//         &:hover, &:focus
+//             color: $red
 
-        &:last-child
-            background-color: $white
+//         &:last-child
+//             background-color: $white
