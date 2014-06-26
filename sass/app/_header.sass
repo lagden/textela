@@ -51,22 +51,37 @@ $lessSearch: 30
 .separador
     position: relative
     &:before
-        $h: 28px
-        left: -115%
+        $h: 26px
         width: 1px
         height: $h
         top: 50%
         margin-top: -($h / 2)
-        margin-left: 10px
         position: absolute
         content: ''
         display: block
         background: $white
 
+$sizess: 1.5em
+.user__profile
+    position: relative
+    $less: -0.3
+    > img
+        width: $sizess + $less
+        height: $sizess + $less
+        border-radius: 50%
+        overflow: hidden
+        vertical-align: middle
+    > span
+        position: absolute
+        background-color: $red
+        font-size: 10px
+        bottom: -10%
+        right: -50%
+
 .toolbelt
     > a
         @extend .link--white
-        font-size: 1.2em
+        font-size: $sizess
         display: inline-block
         vertical-align: middle
         margin-left: 5px

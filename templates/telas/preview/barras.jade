@@ -93,20 +93,21 @@ div.wrapper.pad-t-40.pad-b-40
                 li.pad-10
                     a.icon-check(href='#!/telas')
 
-        //- 7
-        ul.navybar.navybar--fit.navybar__custom.mar-b-20
-            li.bigger.pad-10
-                a(href='#!/telas')
-                    b Item de Cálculo
-            li.pad-10
-                a.icon-plus(href='#!/telas')
+        each cor in cores
+            //- 7
+            ul.navybar.navybar--fit.navybar__custom.mar-b-20(class='navybar__custom--#{cor}')
+                li.bigger.pad-10
+                    a(href='#!/telas')
+                        b Item de Cálculo
+                li.pad-10
+                    a.icon-plus(href='#!/telas')
 
-        //- 8
-        ul.navybar.navybar--fit.navybar__custom.mar-b-20
-            li.bigger.pad-10
-                a(href='#!/telas')
-                    b Item de Cálculo
-            li.divider.pad-l-10
-            li.pad-10
-                a.icon-plus(href='#!/telas')
+            //- 8
+            ul.navybar.navybar--fit.navybar__custom.mar-b-20(class='navybar__custom--#{cor}')
+                li.bigger.pad-10
+                    a(href='#!/telas')
+                        b Item de Cálculo
+                li.divider.pad-l-10
+                li.pad-10
+                    a.icon-plus(href='#!/telas')
 
