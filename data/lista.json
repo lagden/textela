@@ -45,7 +45,8 @@
             "icon-envelope-o",
             "icon-signup",
             "icon-clipboard-check",
-            "icon-calendar"
+            "icon-calendar",
+            "icon-transfer2"
         ]
     }, {
         "Status": ["icon-record icon--red"],
