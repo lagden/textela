@@ -3,6 +3,7 @@ node_modules
 bower_components
 build/*
 dev/**/js/lib/*
+dev/telas/**/*
 dev/**/css/*
 
 # Others
